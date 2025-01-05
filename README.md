@@ -28,3 +28,7 @@ Composed of full suite of string operations: length, copy, comparison, search.
 
 - C++20 capable compiler
 - CMake 3.12 or higher
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

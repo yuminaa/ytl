@@ -8,8 +8,10 @@ namespace ytl
         size_t k = 1;
         while (k <= n / 2)
             k = 2 * k + (1 & -(t[k] < x));
+
         k = 2 * k + (1 & -(k <= n && t[k] < x));
         k >>= __builtin_ctz(~k);
+        k = (k < n) * k + (k >= n) * (n - 1);
         return t[k];
     }
 
@@ -54,7 +56,7 @@ namespace ytl
     }
 
     template<typename T>
-    bool equal(const T *first1, const T *first2, size_t n)
+    bool equal(const T *first1, const T *first2, const size_t n)
     {
         for (size_t i = 0; i < n; ++i)
             if (!(first1[i] == first2[i]))

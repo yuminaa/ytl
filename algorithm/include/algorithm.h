@@ -33,13 +33,13 @@ namespace ytl
     T *rotate(T *t, size_t n, size_t mid);
 
     template<typename T>
-    void sort(T *t, size_t n);
+    void sort(T *t, size_t num);
 
     template<typename T>
-    void partial_sort(T *t, size_t n, size_t m);
+    void partial_sort(T *t, size_t num, size_t m);
 
     template<typename T>
-    void nth_element(T *t, size_t n, size_t nth);
+    void nth_element(T *t, size_t num, size_t nth);
 
     template<typename T>
     const T &min(const T &a, const T &b);

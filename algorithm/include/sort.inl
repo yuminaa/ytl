@@ -60,24 +60,24 @@ namespace ytd
     }
 
     template<typename T>
-    void sort(T *t, size_t n)
+    void sort(T *t, size_t num)
     {
-        detail::quick_sort(t, n);
+        detail::quick_sort(t, num);
     }
 
     template<typename T>
-    void partial_sort(T *t, size_t n, size_t m)
+    void partial_sort(T *t, size_t num, size_t m)
     {
-        if (m >= n)
+        if (m >= num)
         {
-            sort(t, n);
+            sort(t, num);
             return;
         }
 
         for (size_t i = (m - 1) / 2; i != static_cast<size_t>(-1); --i)
             detail::sift_down(t, i, m - 1);
 
-        for (size_t i = m; i < n; ++i)
+        for (size_t i = m; i < num; ++i)
         {
             if (t[i] < t[0])
             {
@@ -94,13 +94,13 @@ namespace ytd
     }
 
     template<typename T>
-    void nth_element(T *t, const size_t n, const size_t nth)
+    void nth_element(T *t, const size_t num, const size_t nth)
     {
-        if (nth >= n)
+        if (nth >= num)
             return;
 
         size_t left = 0;
-        size_t right = n - 1;
+        size_t right = num - 1;
 
         while (true)
         {

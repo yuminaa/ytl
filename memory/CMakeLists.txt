@@ -1,7 +1,8 @@
 add_library(ytd_memory
-        src/allocator.cpp
-        src/smart_pointer.cpp
         include/memory.h
+        include/allocator.inl
+        include/smart_ptr.inl
+
         src/mem_op.cpp
 )
 
