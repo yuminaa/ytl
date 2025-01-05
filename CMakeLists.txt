@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.29)
-project(ytd
+project(ytl
         LANGUAGES CXX
         VERSION 1.0.0
 )

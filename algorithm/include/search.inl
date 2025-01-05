@@ -1,9 +1,9 @@
 #pragma once
 
-namespace ytd
+namespace ytl
 {
     template<typename T>
-    T lower_bound(const T* t, const size_t n, T x)
+    T lower_bound(const T *t, const size_t n, T x)
     {
         size_t k = 1;
         while (k <= n / 2)
@@ -14,7 +14,7 @@ namespace ytd
     }
 
     template<typename T>
-    T upper_bound(const T* t, const size_t n, T x)
+    T upper_bound(const T *t, const size_t n, T x)
     {
         size_t k = 1;
         while (k <= n / 2)
@@ -25,7 +25,7 @@ namespace ytd
     }
 
     template<typename T>
-    bool binary_search(const T* t, const size_t n, T x)
+    bool binary_search(const T *t, const size_t n, T x)
     {
         size_t k = 1;
         while (k <= n / 2)
@@ -36,7 +36,7 @@ namespace ytd
     }
 
     template<typename T>
-    const T* find(const T* t, size_t n, const T& value)
+    const T *find(const T *t, size_t n, const T &value)
     {
         for (size_t i = 0; i < n; ++i)
             if (t[i] == value)
@@ -45,7 +45,7 @@ namespace ytd
     }
 
     template<typename T>
-    size_t count(const T* t, size_t n, const T& value)
+    size_t count(const T *t, size_t n, const T &value)
     {
         size_t count = 0;
         for (size_t i = 0; i < n; ++i)
@@ -54,7 +54,7 @@ namespace ytd
     }
 
     template<typename T>
-    bool equal(const T* first1, const T* first2, size_t n)
+    bool equal(const T *first1, const T *first2, size_t n)
     {
         for (size_t i = 0; i < n; ++i)
             if (!(first1[i] == first2[i]))

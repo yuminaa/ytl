@@ -2,7 +2,7 @@
 
 #include <cstddef>
 
-namespace ytd
+namespace ytl
 {
     size_t strlen(const char* s) noexcept;
     constexpr size_t strnlen(const char* s, size_t maxlen) noexcept;

@@ -5,7 +5,7 @@ namespace ytd
     namespace detail
     {
         template<typename T>
-        size_t partition(T* t, size_t n)
+        size_t partition(T *t, const size_t n)
         {
             T pivot = t[n - 1];
             size_t i = 0;
@@ -24,7 +24,7 @@ namespace ytd
         }
 
         template<typename T>
-        void quick_sort(T* t, size_t n)
+        void quick_sort(T *t, size_t n)
         {
             if (n <= 1)
                 return;
@@ -35,11 +35,12 @@ namespace ytd
         }
 
         template<typename T>
-        void sift_down(T* t, size_t start, size_t end)
+        void sift_down(T *t, const size_t start, const size_t end)
         {
             size_t root = start;
 
-            while (root * 2 + 1 <= end) {
+            while (root * 2 + 1 <= end)
+            {
                 size_t child = root * 2 + 1;
                 size_t swap_idx = root;
 
@@ -59,26 +60,27 @@ namespace ytd
     }
 
     template<typename T>
-    void sort(T* t, size_t n)
+    void sort(T *t, size_t n)
     {
         detail::quick_sort(t, n);
     }
 
     template<typename T>
-    void partial_sort(T* t, size_t n, size_t m)
+    void partial_sort(T *t, size_t n, size_t m)
     {
-        if (m >= n) {
+        if (m >= n)
+        {
             sort(t, n);
             return;
         }
 
-        // Create heap of first m elements
-        for (size_t i = (m - 1) / 2; i != size_t(-1); --i)
+        for (size_t i = (m - 1) / 2; i != static_cast<size_t>(-1); --i)
             detail::sift_down(t, i, m - 1);
 
-        // Process remaining elements
-        for (size_t i = m; i < n; ++i) {
-            if (t[i] < t[0]) {
+        for (size_t i = m; i < n; ++i)
+        {
+            if (t[i] < t[0])
+            {
                 swap(t[0], t[i]);
                 detail::sift_down(t, 0, m - 1);
             }
@@ -92,7 +94,7 @@ namespace ytd
     }
 
     template<typename T>
-    void nth_element(T* t, size_t n, size_t nth)
+    void nth_element(T *t, const size_t n, const size_t nth)
     {
         if (nth >= n)
             return;

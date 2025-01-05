@@ -1,6 +1,6 @@
 #include "../include/string.h"
 
-namespace ytd::detail
+namespace ytl::detail
 {
     static constexpr size_t ones = ~size_t { 0 } / 0xFF;
     static constexpr size_t highs = ones * 0x80;
@@ -11,7 +11,7 @@ namespace ytd::detail
     }
 }
 
-namespace ytd
+namespace ytl
 {
     size_t strlen(const char *s) noexcept
     {

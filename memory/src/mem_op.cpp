@@ -1,7 +1,7 @@
 #include <cstdint>
 #include "../include/memory.h"
 
-namespace ytd
+namespace ytl
 {
     void* memset(void* s, const int c, size_t count) noexcept
     {
