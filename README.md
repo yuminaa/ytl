@@ -18,6 +18,10 @@ Highly optimized memory operations with word-size alignment and branchless optim
 Fast string manipulation functions optimized for performance with word-aligned operations for maximum efficiency.
 Composed of full suite of string operations: length, copy, comparison, search.
 
+### Network
+
+Fast, efficient, HTTPS & UDP
+
 ## Desgin Philosophy
 
 - **Minimal**: Only the necessary components are included in the library.

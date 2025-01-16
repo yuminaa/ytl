@@ -16,8 +16,10 @@ target_include_directories(ytd_common INTERFACE
 )
 
 add_subdirectory(algorithm)
-add_subdirectory(memory)
+add_subdirectory(concurrency)
+# add_subdirectory(memory)
 add_subdirectory(string)
+add_subdirectory(network)
 
 if(YTD_BUILD_TESTS)
     enable_testing()

@@ -8,12 +8,12 @@ target_include_directories(ytd_algorithm
 target_sources(ytd_algorithm
         INTERFACE
         include/algorithm.h
-        include/search.inl
-        include/sequence.inl
-        include/sort.inl
         include/compare.inl
         include/heap.inl
         include/numeric.inl
+        include/search.inl
+        include/sequence.inl
+        include/sort.inl
 )
 
 target_link_libraries(ytd_algorithm INTERFACE ytd_common)

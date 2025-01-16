@@ -12,9 +12,9 @@ add_executable(ytd_tests
 target_link_libraries(ytd_tests
         PRIVATE
         ytd_algorithm
-        ytd_memory
+        # ytd_memory
         ytd_string
-        catch2
+        # catch2
 )
 
 add_test(NAME ytd_tests COMMAND ytd_tests)
